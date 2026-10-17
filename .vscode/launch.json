@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MNIST GRPO (quick)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/experiments/mnist_grpo.py",
+      "args": ["--num-rollout", "100", "--eval-interval", "20"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "MNIST GRPO (compare estimators)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/experiments/mnist_grpo.py",
+      "args": ["--compare"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "LLM GSM8K (dry run, no GPU spend)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/experiments/llm_gsm8k.py",
+      "args": ["--dry-run"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "LLM GSM8K (launch smoke run on Modal)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/experiments/llm_gsm8k.py",
+      "args": ["--preset", "smoke", "--yes"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
